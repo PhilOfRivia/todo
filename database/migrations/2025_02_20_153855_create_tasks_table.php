@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('description');
-            $table->dateTime('generated_at');
             $table->dateTime('deadline');
             $table->dateTime('compleated_at');
             $table->foreignId('list_id');
