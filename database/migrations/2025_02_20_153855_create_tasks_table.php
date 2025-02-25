@@ -15,11 +15,12 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('description');
-            $table->dateTime('deadline');
-            $table->dateTime('compleated_at');
+            $table->dateTime('deadline')->nullable();
+            $table->dateTime('compleated_at')->nullable();
             $table->foreignId('list_id');
-            $table->json('attachments');
+            $table->json('attachments')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

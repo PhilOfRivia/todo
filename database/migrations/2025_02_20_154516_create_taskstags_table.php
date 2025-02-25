@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('taskstags', function (Blueprint $table) {
-            $table->id();
+        Schema::create('tasks_tags', function (Blueprint $table) {
             $table->foreignId('task_id');
             $table->foreignId('tag_id');
             $table->timestamps();
+            $table->primary(['task_id','tag_id']);
         });
     }
 
